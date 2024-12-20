@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Submission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 1.2px;
+        }
+
+        .form-container {
+            background-color: lightcyan;
+            padding: 20px;
+            width: 60%;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            font-weight: bold;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .input-group input,
+        .input-group select,
+        .input-group textarea {
+            width: 90%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .input-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn-submit:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Project Submission Form</h1>
+        <form action="/submit_project" method="POST" enctype="multipart/form-data">
+
+            <!-- Name -->
+            <div class="input-group">
+                <label for="name">Full Name/ID:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name and ID">
+            </div>
+
+            <!-- Email -->
+            <div class="input-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+
+            <!-- Project Title -->
+            <div class="input-group">
+                <label for="title">Project Title:</label>
+                <input type="text" id="title" name="title" required placeholder="Enter the title of your project">
+            </div>
+
+            <!-- Project Description -->
+            <div class="input-group">
+                <label for="description">Project Description:</label>
+                <textarea id="description" name="description" required placeholder="Describe your project"></textarea>
+            </div>
+
+            <!-- Project Category -->
+            <div class="input-group">
+                <label for="category">Project Category:</label>
+                <select id="category" name="category" required>
+                    <option value="">Select a category</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Mobile App">Mobile App</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="AI and Machine Learning">AI and Machine Learning</option>
+                    <option value="Game Development">Game Development</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- File Upload -->
+            <div class="input-group">
+                <label for="project-file">Upload Project Files:</label>
+                <input type="file" id="project-file" name="project-file" accept=".zip,.rar,.pdf,.doc,.docx,.ppt,.jpg,.png" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn-submit">Submit Project</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>Presented by: Faraz Ahmed</p>
+    </div>
+
+</body>
+</html>
